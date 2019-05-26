@@ -25,3 +25,10 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+com.android.ddmlib.DdmPreferences.setTimeOut(600000)
+
+android {
+    adbOptions {
+        timeOutInMs 600000
+    }
+}
